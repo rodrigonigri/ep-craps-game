@@ -3,7 +3,7 @@ Fichas_iniciais=1000
 print("Fichas iniciais: {0}".format(Fichas_iniciais))
 a = True
 b = True
-print('Faça sua aposta e decida quanto você quer apostar. As possíveis apostas são: Pass_line, Field, Any_Craps e Twelve')
+print('Faça sua aposta e decida quanto você quer apostar. As possíveis apostas são: Pass_line, Field, Any_craps e Twelve')
 aposta = input("Escolha uma aposta dentre as 4 acima: ")
 quantidade=int(input("Quanto você quer apostar: "))
 while b:
@@ -50,7 +50,7 @@ while b:
                     else:
                         a=True
         elif aposta == "Field":
-            print("Você está na fase C")
+            #print("Você está na fase C")
             if dado_1+dado_2==5 or dado_1+dado_2==6 or dado_1+dado_2==7 or dado_1+dado_2==8:
                 print("Os dados foram {0} e {1}, somando {2}".format(dado_1,dado_2,dado_1+dado_2))
                 print("NÃO FOI DESSA VEZ")
@@ -68,6 +68,20 @@ while b:
                 print(Fichas_iniciais)
             else:
                 print("Os dados foram {0} e {1}, somando {2}".format(dado_1,dado_2,dado_1+dado_2))
-                print("PARABÉNS, VOCE GANHOU 3x O VALOR!!!")
+                print("PARABÉNS, VOCÊ GANHOU 3x O VALOR!!!")
                 Fichas_iniciais+=3*quantidade
                 print(Fichas_iniciais)
+        elif aposta == 'Any_craps':
+            #print("Você está na fase C")
+            if dado_1+dado_2==2 or dado_1+dado_2==3 or dado_1+dado_2==12:
+                print("Os dados foram {0} e {1}, somando {2}".format(dado_1,dado_2,dado_1+dado_2))
+                print("PARABÉNS, VOCÊ GANHOU 7x O VALOR!!!")
+                Fichas_iniciais+=7*quantidade
+                print(Fichas_iniciais)
+            else:
+                print("Os dados foram {0} e {1}, somando {2}".format(dado_1,dado_2,dado_1+dado_2))
+                print("NÃO FOI DESSA VEZ")
+                Fichas_iniciais-=quantidade
+                print(Fichas_iniciais)
+        elif aposta == "Twelve":
+            
