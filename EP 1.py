@@ -84,4 +84,14 @@ while b:
                 Fichas_iniciais-=quantidade
                 print(Fichas_iniciais)
         elif aposta == "Twelve":
-            
+            #print("Você está na fase C")
+            if dado_1+dado_2 == 12:
+                print("Os dados foram {0} e {1}, somando {2}".format(dado_1,dado_2,dado_1+dado_2))
+                print("PARABÉNS, VOCÊ GANHOU 30x O VALOR!!!")
+                Fichas_iniciais+=30*quantidade
+                print(Fichas_iniciais)
+            else:
+                print("Os dados foram {0} e {1}, somando {2}".format(dado_1,dado_2,dado_1+dado_2))
+                print("NÃO FOI DESSA VEZ")
+                Fichas_iniciais-=quantidade
+                print(Fichas_iniciais)
